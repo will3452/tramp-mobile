@@ -4,6 +4,7 @@ import 'package:tramp_flutter/page/login.dart';
 import 'package:tramp_flutter/page/maps.dart';
 import 'package:tramp_flutter/page/messages.dart';
 import 'package:tramp_flutter/page/schedule.dart';
+import 'package:tramp_flutter/page/trip-history.dart';
 import 'package:tramp_flutter/page/trips.dart';
 import 'package:tramp_flutter/storage.dart';
 
@@ -143,20 +144,23 @@ class _HomePageState extends State<HomePage> {
                           height: 20,
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            // SizedBox(
-                            //   width: 32,
-                            // ),
-                            // Column(
-                            //   children: [
-                            //     HomeMenu(
-                            //       assetImage: 'assets/images/profile.png',
-                            //       page: FormRequest(),
-                            //       label: "Profile",
-                            //     ),
-                            //   ],
-                            // ),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            SizedBox(
+                              width: 32,
+                            ),
+                            Column(
+                              children: [
+                                HomeMenu(
+                                  assetImage: 'assets/images/packing-list.png',
+                                  page: TripHistory(),
+                                  label: "Trip History",
+                                ),
+                              ],
+                            ),
                             SizedBox(
                               width: 16,
                             ),

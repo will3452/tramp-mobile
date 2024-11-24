@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:tramp_flutter/http.dart';
 import 'package:tramp_flutter/page/home.dart';
+import 'package:tramp_flutter/page/register.dart';
 import 'package:tramp_flutter/storage.dart';
 
 class LoginPage extends StatelessWidget {
@@ -160,8 +161,7 @@ class _LoginFormState extends State<LoginForm> {
                   // );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: const Color.fromARGB(255, 2, 50, 90),
-                  onPrimary: Colors.white,
+                  foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 2, 50, 90),
                 ),
                 child: const Text(
                   "LOGIN",
@@ -171,16 +171,23 @@ class _LoginFormState extends State<LoginForm> {
                 ),
               ),
             ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     Text("Dont' have an account?"),
-            //     TextButton(
-            //       onPressed: () {},
-            //       child: Text("Sign Up"),
-            //     )
-            //   ],
-            // )
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Dont' have an account?"),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RegisterPage(),
+                      ),
+                    );
+                  },
+                  child: Text("Sign Up"),
+                )
+              ],
+            )
           ],
         ),
       ),
