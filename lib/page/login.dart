@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:tramp_flutter/http.dart';
-import 'package:tramp_flutter/page/home.dart';
 import 'package:tramp_flutter/page/register.dart';
+import 'package:tramp_flutter/page/tramp.dart';
 import 'package:tramp_flutter/storage.dart';
 
 class LoginPage extends StatelessWidget {
@@ -85,7 +85,7 @@ class _LoginFormState extends State<LoginForm> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => HomePage(),
+          builder: (context) => TrampPage(),
         ),
       );
     } on DioException catch (e) {
